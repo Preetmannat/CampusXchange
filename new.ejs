@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <br><br>
+    <h3>Add Item</h3>
+    <form method="POST" action="/Item" novalidate  class="needs-validation">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="Item[title]" placeholder="Enter title" class="form-control" required> 
+            <div class="valid-feedback">Looks Good!</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" name="Item[description]" placeholder="Enter description" class="form-control" required>
+            <div class="invalid-feedback">Plese Enter a Short Description</div>
+        </div>
+       
+        <div class="mb-3">
+            <label for="image" class="form-label">Image Link</label>
+            <input type="text" name="Item[image]" placeholder="Enter image Url" class="form-control">
+        </div>
+       
+        <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input  name="Item[price]" placeholder="Enter Item price" class="form-control" required>
+        <div class="invalid-feedback">Please Enter Valid Price</div>
+      </div>
+        
+        <div class="mb-3 col-md-8">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="Item[location]" placeholder="Enter location" class="form-control" required>
+            <div class="invalid-feedback">Please Enter Valid Location Name</div>
+        </div>
+    </div>
+        <br><br>
+        <button class="btn btn-dark add-btn">Add</button>
+    </form>
+    <br><br>
+</div>
+</div>
+</body>
+</html>
